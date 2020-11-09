@@ -3,24 +3,12 @@ import { Notify, uid } from 'quasar'
 
 const state = {
   notes: {
-    ID1: {
+    /* ID1: {
       title: 'Note 1',
       text: 'Texte 1',
       creation: '10/01/2020',
       editOn: false
-    },
-    ID2: {
-      title: 'Note 2',
-      text: 'Texte 2',
-      creation: '10/01/2020',
-      editOn: false
-    },
-    ID3: {
-      title: 'Note 3',
-      text: 'Texte 3',
-      creation: '10/01/2020',
-      editOn: false
-    }
+    } */
   }
 }
 

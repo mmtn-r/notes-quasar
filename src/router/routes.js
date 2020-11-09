@@ -1,4 +1,3 @@
-import Index from 'pages/Index'
 import Notes from 'pages/Notes'
 import Settings from 'pages/Settings'
 
@@ -8,7 +7,6 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       // { path: '', component: () => import('pages/Index.vue') }
-      { path: '', component: Index },
       { path: '/notes', component: Notes },
       { path: '/settings', component: Settings }
     ]
