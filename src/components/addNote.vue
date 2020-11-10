@@ -9,6 +9,8 @@
             autogrow
             borderless
             placeholder="Commencez à écrire ici"
+            autofocus
+            clearable
           />
         </div>
         <q-separator />

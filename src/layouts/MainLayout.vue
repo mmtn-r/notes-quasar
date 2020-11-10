@@ -3,11 +3,9 @@
     <q-header elevated>
       <q-toolbar>
         <!-- <q-btn flat dense round icon="menu" aria-label="Menu" @click="leftDrawerOpen = !leftDrawerOpen"/> -->
-
         <q-toolbar-title class="absolute-center">
           Notes App
         </q-toolbar-title>
-
       </q-toolbar>
     </q-header>
 
@@ -70,15 +68,15 @@ export default {
     return {
       leftDrawerOpen: false,
       navs: [
-        {
+        /* {
           label: 'Accueil',
           icon: 'create',
           to: '/'
-        },
+        }, */
         {
           label: 'Notes',
           icon: 'sticky_note_2',
-          to: '/notes'
+          to: '/'
         },
         {
           label: 'Paramètres',
