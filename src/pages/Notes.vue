@@ -1,12 +1,12 @@
 <template>
   <q-page class="flex flex-center column">
 
-    <q-btn label="Créer une nouvelle note" color="primary" @click="card = true" />
+    <q-btn label="Créer une nouvelle note" color="primary" @click="showAddNote = true" />
 
-    <q-dialog v-model="card" persistent>
+    <q-dialog v-model="showAddNote" persistent>
       <addNote
         :note="notes"
-        @close="card = false"
+        @close="showAddNote = false"
       />
     </q-dialog>
 
@@ -36,7 +36,7 @@ export default {
   },
   data () {
     return {
-      card: false
+      showAddNote: false
     }
   }
 }
