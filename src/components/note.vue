@@ -14,8 +14,9 @@
               flat
               round
               icon="create"
-              @click="updateNote({ id: id, updates: { editOn: !note.editOn } })"
+              @click.stop="showEditNote = true"
           />
+          <!-- @click="updateNote({ id: id, updates: { editOn: !note.editOn } })" -->
           <q-btn
               flat
               round
@@ -45,22 +46,36 @@
         </q-dialog>
       </q-card-actions>
     </q-card>
+
+    <q-dialog v-model="showEditNote" persistent>
+      <editNote
+        @close="showEditNote = false"
+        :note="note"
+        :id="id"
+      />
+    </q-dialog>
+
   </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
+import editNote from './editNote'
 
 export default {
   name: 'Note',
+  data () {
+    return {
+      confirm: false,
+      showEditNote: false
+    }
+  },
   props: ['note', 'id'],
   methods: {
     ...mapActions('notes', ['updateNote', 'deleteNote'])
   },
-  data () {
-    return {
-      confirm: false
-    }
+  components: {
+    editNote
   }
 }
 </script>
